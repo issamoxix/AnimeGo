@@ -1,0 +1,24 @@
+.Home {
+  display: grid;
+  grid-template-areas: "A A A";
+}
+
+ul {
+  list-style: none;
+}
+
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
+  padding: 0;
+  margin: 0;
+}
+.Sugg {
+  border: 1px solid white;
+  overflow-y: scroll;
+  height: 28vh;
+  position: absolute;
+  background-color: grey;
+}
+.hide {
+  display: none;
+}

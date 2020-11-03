@@ -1,0 +1,61 @@
+.Anime-container {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://i.pinimg.com/originals/f2/71/7f/f2717f94489f4b4d0a5b2b42ef5554f2.jpg");
+
+  background-size: cover;
+  display: grid;
+  grid-template-areas:
+    "A B B B B "
+    "A B B B B"
+    "A B B B B ";
+}
+.desc {
+  grid-area: A;
+
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.show {
+  grid-area: B;
+  display: grid;
+}
+.ch {
+  margin: auto;
+}
+
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ccc5c5;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  z-index: 1;
+  overflow-y: scroll;
+  height: 18em;
+}
+
+.dropdown1:hover .dropdown-content {
+  display: block;
+}
+.screen {
+  margin: auto;
+}
+li {
+  padding: 5px;
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
+}
+li:hover {
+  background-color: rgba(0, 0, 0, 0.671);
+  color: white;
+}
