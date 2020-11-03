@@ -30,7 +30,27 @@
   position: relative;
   display: inline-block;
 }
-
+span {
+  color: white;
+  font-size: 20px;
+}
+#ep {
+  padding: 8px;
+  font-size: 20px;
+  border-color: transparent;
+  transition: 380ms;
+}
+#ep_r {
+  background-color: red;
+  padding: 8px;
+  font-size: 20px;
+  border-color: transparent;
+  transition: 380ms;
+}
+.AnimeTitle {
+  color: white;
+  font-size: 50px;
+}
 .dropdown-content {
   display: none;
   position: absolute;
