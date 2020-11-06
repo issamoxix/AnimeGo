@@ -15,7 +15,8 @@ const Work:React.FC = ()=>{
     const[text,setText] = useState('')
 
     return (
-        <div className="All">
+        <div className="All" style={lod?{cursor:"wait"}:{}}>
+            
             <div className={val ?"container":"container2"}>
             {!val?<div className="res">
                     {x.map((d:string)=>{
@@ -48,6 +49,7 @@ const Work:React.FC = ()=>{
                     </div>:null}
                     </form>
                     <img src="./pic/lod.gif" alt="loading" className={lod?"show":"hide"} />
+                  
                 </div>
                
               

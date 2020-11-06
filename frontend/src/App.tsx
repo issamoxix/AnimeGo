@@ -1,5 +1,4 @@
 import React  from 'react';
-import Home from './Component/pages/Home'
 import Work from './Component/pages/Work'
 import Anime from './Component/pages/Anime'
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';

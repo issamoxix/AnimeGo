@@ -4,7 +4,7 @@ import "./Episodes.css"
 type info= {
     ep:Element[],
 }
-const eps = [<li>ep</li>,<li>ep</li>,<li>ep</li>]
+
 function Episodes({ ep }: info) {
     return (
         <div className="Episodes">

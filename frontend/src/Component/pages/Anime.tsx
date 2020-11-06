@@ -65,7 +65,7 @@ const Anime:React.FC = ()=>{
                         }>
                         <input type="text" id={ep} placeholder="Episode"  onChange={(e)=>{
                             if(e.currentTarget.value === '') return setep('ep'), setint(false) ,setspan('red')
-                            if(!parseInt(e.currentTarget.value) || parseInt(e.currentTarget.value) == 0 || parseInt(e.currentTarget.value) >x ) return setep('ep_r'), setint(false) ,setspan('red')
+                            if(!parseInt(e.currentTarget.value) || parseInt(e.currentTarget.value) === 0 || parseInt(e.currentTarget.value) >x ) return setep('ep_r'), setint(false) ,setspan('red')
                             setint(true)
                             setspan('white')
                             return setep('ep')
@@ -79,7 +79,7 @@ const Anime:React.FC = ()=>{
                </div>
             </div>
             <div className="Back">
-               <Link to='/'><img src="./pic/previous.png" /></Link>
+               <Link to='/'><img src="./pic/previous.png" alt="Home" /></Link>
             </div>
         </div>
     )

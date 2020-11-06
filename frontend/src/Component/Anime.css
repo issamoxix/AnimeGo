@@ -18,8 +18,9 @@
   grid-template-rows: 70vh 30vh;
 }
 .show {
-  grid-area: B;
-  display: grid;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
 }
 .ch {
   margin: auto;
@@ -63,6 +64,7 @@ button:active {
 .AnimeTitle {
   color: white;
   font-size: 50px;
+  width: 50vw;
 }
 .dropdown-content {
   display: none;
@@ -89,8 +91,8 @@ li {
   cursor: pointer;
 }
 li:hover {
-  background-color: rgba(0, 0, 0, 0.671);
-  color: white;
+  background-color: rgba(211, 209, 209, 0.795);
+  color: black;
 }
 .Back {
   position: absolute;
