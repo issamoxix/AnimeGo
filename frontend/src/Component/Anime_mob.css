@@ -1,0 +1,25 @@
+.Anime-container {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: auto;
+
+  background-image: url("http://localhost:3000/pic/bg2.jpg");
+
+  background-size: cover;
+}
+.dropdown-content {
+  overflow-y: scroll;
+  height: 18em;
+}
+.tv {
+  width: 100vw;
+  height: 50vh;
+}
+ul {
+  text-align: center;
+}
+li {
+  margin-top: 5px;
+  font-family: sans-serif;
+  border-top: 1px solid white;
+}

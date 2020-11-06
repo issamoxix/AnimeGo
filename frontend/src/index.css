@@ -8,9 +8,9 @@ ul {
 }
 
 * {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande";
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 .Sugg {
   border: 1px solid white;
@@ -21,4 +21,6 @@ ul {
 }
 .hide {
   display: none;
+}
+@media only screen and (max-width: 600px) {
 }

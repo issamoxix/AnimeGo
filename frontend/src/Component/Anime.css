@@ -63,7 +63,7 @@ button:active {
 }
 .AnimeTitle {
   color: white;
-  font-size: 50px;
+  font-size: 42px;
   width: 50vw;
 }
 .dropdown-content {
@@ -120,4 +120,34 @@ li:hover {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(104, 104, 104, 0.76);
+}
+.tv {
+  margin-top: 10px;
+  width: 40rem;
+  height: 25rem;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .Anime-container {
+    display: grid;
+    grid-template-areas:
+      "C"
+      "D"
+      "E";
+
+    width: 100vw;
+    height: 100vh;
+  }
+  .desc {
+    width: 100vw;
+  }
+  .show {
+    width: 100vw;
+  }
+  .ch {
+  }
 }

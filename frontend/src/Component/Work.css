@@ -19,6 +19,7 @@
   font-size: 3rem;
   transition: 350ms;
   background-color: #fde3c6d1;
+  color: white;
 }
 .container2 {
   display: grid;
@@ -64,6 +65,7 @@ body {
   background-image: url("https://i.pinimg.com/originals/7f/c2/2a/7fc22a18dcf4b299c8d3f54c7d4b6705.jpg");
   background-attachment: fixed;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .inpt:focus {
   background-color: #9b8bd5d4;
@@ -84,4 +86,23 @@ body {
   right: 10px;
   margin-top: 25px;
   cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  .search_fix {
+    position: fixed;
+
+    background-color: #ffffff59;
+    width: 100vw;
+    text-align: center;
+    padding: 12px;
+  }
+  .res {
+    display: grid;
+
+    grid-template-areas: "A";
+  }
+  body {
+    background-image: url("https://i.pinimg.com/originals/7f/c2/2a/7fc22a18dcf4b299c8d3f54c7d4b6705.jpg");
+    background-size: auto;
+  }
 }

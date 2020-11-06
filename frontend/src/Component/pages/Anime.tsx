@@ -74,7 +74,7 @@ const Anime:React.FC = ()=>{
                     </form>
                 </div>
                <div className="screen">
-                   <iframe title="anime" style={{width:"40rem",height:"25rem"}} src={iframe} />
+                   <iframe  className="tv" title="anime"  src={iframe} />
                     <h3 className="AnimeTitle">{`${query.get('name')} Episode ${int?ep_n:NaN}`}</h3>
                </div>
             </div>
