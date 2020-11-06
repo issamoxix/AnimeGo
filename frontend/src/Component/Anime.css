@@ -1,7 +1,7 @@
 .Anime-container {
   height: 100vh;
   width: 100%;
-  background-image: url("https://i.pinimg.com/originals/f2/71/7f/f2717f94489f4b4d0a5b2b42ef5554f2.jpg");
+  background-image: url("http://localhost:3000/pic/bg2.jpg");
 
   background-size: cover;
   display: grid;
@@ -12,11 +12,10 @@
 }
 .desc {
   grid-area: A;
-
-  display: block;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
+  background-color: #00000042;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 70vh 30vh;
 }
 .show {
   grid-area: B;
@@ -46,6 +45,20 @@ span {
   font-size: 20px;
   border-color: transparent;
   transition: 380ms;
+}
+button {
+  background-color: #1e1e1e63;
+  margin-left: 10px;
+  color: white;
+  padding: 8px;
+  font-size: 20px;
+  border: 4px solid white;
+  transition: outline 0.2s linear, border-color 0.2s linear;
+}
+button:active {
+  outline: solid #fde3c6d1;
+  border-color: transparent;
+  outline-offset: 4px;
 }
 .AnimeTitle {
   color: white;
@@ -78,4 +91,31 @@ li {
 li:hover {
   background-color: rgba(0, 0, 0, 0.671);
   color: white;
+}
+.Back {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+/* Scroll bar  */
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(90, 88, 88, 0.76);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(104, 104, 104, 0.76);
 }

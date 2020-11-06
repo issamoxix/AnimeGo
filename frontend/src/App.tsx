@@ -19,8 +19,8 @@ const App: React.FC = ()=> {
     return (<>
         <Router>
             <Switch>
-                <Route path='/' exact component={Home} />
-                <Route path='/Work' exact component={Work} />
+                {/* <Route path='/' exact component={Home} /> */}
+                <Route path='/' exact component={Work} />
                 <Route path='/Anime' exact component={Anime} />
            </Switch>
         </Router>
