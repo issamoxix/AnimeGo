@@ -1,8 +1,10 @@
 import React  from 'react';
 import Work from './Component/pages/Work'
-import Anime from './Component/pages/Anime'
+
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import './index.css'
+import Show from './Component/pages/Show';
+
 const App: React.FC = ()=> {
     // const {data} = useQuery(gql`
     //     {
@@ -13,14 +15,14 @@ const App: React.FC = ()=> {
     //     }
     // `)
 
-  
 
     return (<>
         <Router>
             <Switch>
                 {/* <Route path='/' exact component={Home} /> */}
+                
                 <Route path='/' exact component={Work} />
-                <Route path='/Anime' exact component={Anime} />
+                <Route path='/Anime' exact component={Show} />
            </Switch>
         </Router>
       </>)
