@@ -4,6 +4,7 @@ import {EgyAnime} from './entity/EgyAnime'
 import {link_sugg} from "./get_sugg"
 import {test} from './test'
 import {get_img} from './get_img'
+import { base } from './base';
 @Resolver()
 export class AnimeResolver{
     @Query(()=> String)
@@ -17,9 +18,17 @@ export class AnimeResolver{
     @Mutation(()=> [String])
     async get_img(
         @Arg('anime') anime:string,
+        @Arg('lang') lang:string
     ){
+        if(lang==="arb") {
         const ani = new get_img(anime)
         return await ani.get_src()
+        }else {
+            const site = new  base("https://gogoanime.so/","naruto")
+            return await site.main()
+
+        }
+        
 
     }
     @Mutation(()=> Boolean)

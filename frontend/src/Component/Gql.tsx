@@ -25,8 +25,8 @@ const  Gql = {
   }
   `,
   get_img:gql`
-  mutation ($anime: String!) {
-    get_img(anime: $anime) 
+  mutation ($anime: String!,$lang: String!) {
+    get_img(anime: $anime lang:$lang) 
   }
   `
 
