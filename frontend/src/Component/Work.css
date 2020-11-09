@@ -59,13 +59,23 @@
 .hide {
   display: contents;
 }
-.show {
-}
+
 body {
   background-image: url("https://i.pinimg.com/originals/7f/c2/2a/7fc22a18dcf4b299c8d3f54c7d4b6705.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.undo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0.7;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+.undo:hover {
+  opacity: 1;
 }
 .inpt:focus {
   background-color: #9b8bd5d4;

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import '../Work.css'
 import Card from '../Card'
 import Gql from '../Gql'
-import { Link } from 'react-router-dom'
+import { Link, Redirect, useLocation } from 'react-router-dom'
 
 
 
@@ -14,10 +14,16 @@ const Work:React.FC = ()=>{
     const [srcx] = useMutation(Gql.get_img)
     const [lod,setlod] = useState(false)
     const[text,setText] = useState('')
-
+    let query = new URLSearchParams(useLocation().search)
+    let lang =query.get('lang')
+    // redirect to english search if the query is not arab or not declared 
+    if(lang != "arb") lang = "eng"
+     
     return (
         <div className="All" style={lod?{cursor:"wait"}:{}}>
-            
+            <Link to="/">
+                <img className="undo" src="./pic/undo.png" alt="Back" />
+            </Link>
             <div className={val ?"container":"container2"}>
             {!val?<div className="res">
                     {x.map((d:string)=>{

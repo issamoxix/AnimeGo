@@ -1,3 +1,4 @@
+//Page That Display the Anime Episodes
 import React, { useEffect, useState } from 'react'
 import '../Show.css'
 import EpisodeBox from '../EpisodeBox'

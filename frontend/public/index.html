@@ -43,4 +43,11 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    document.getElementsByClassName('sub-body')[0].addEventListener('mouseover',()=>document.getElementsByClassName('right')[0].style.backgroundColor = "#d66813")
+    document.getElementsByClassName('sub-body')[0].addEventListener('mouseout',()=>document.getElementsByClassName('right')[0].style.backgroundColor = "")
+    document.getElementsByClassName('sub-body')[1].addEventListener('mouseover',()=>document.getElementsByClassName('left')[0].style.backgroundColor = "#d66813")
+    document.getElementsByClassName('sub-body')[1].addEventListener('mouseout',()=>document.getElementsByClassName('left')[0].style.backgroundColor = "")
+  
+  </script>
 </html>
