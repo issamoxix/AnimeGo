@@ -122,3 +122,12 @@ body {
     background-size: auto;
   }
 }
+@media only screen and (max-width: 600px) {
+  .fixed {
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    top: unset;
+    margin-top: 20px;
+  }
+}

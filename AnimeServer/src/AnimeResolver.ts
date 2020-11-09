@@ -24,7 +24,7 @@ export class AnimeResolver{
         const ani = new get_img(anime)
         return await ani.get_src()
         }else {
-            const site = new  base("https://gogoanime.so/","naruto")
+            const site = new  base("https://gogoanime.so/",anime)
             return await site.main()
 
         }

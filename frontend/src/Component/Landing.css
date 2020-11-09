@@ -1,5 +1,6 @@
 .container-L {
   display: flex;
+  overflow: hidden;
 }
 
 .body {

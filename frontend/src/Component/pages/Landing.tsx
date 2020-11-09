@@ -8,11 +8,13 @@ const Landing:React.FC = ()=>{
     
     document.getElementsByTagName('body')[0].style.overflow = "hidden";
     
+    setTimeout(()=>document.getElementsByTagName('body')[0].style.height = "100%"
+  ,2400)
    
     
     
     return (
-<div className="container-L">  
+<div className="container-L" style={{height:"100%"}}>  
   <div className="left">
     <div className="body">
       <Link to="/search?lang=arb">
