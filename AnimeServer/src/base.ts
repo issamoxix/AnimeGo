@@ -58,17 +58,30 @@ export class base {
         return arr
         
     }async main(){
-        console.log("test")
+        
         const response = await superagent.get(`https://gogoanime.so//search.html?keyword=${this.term}`)
         const doc = new beautifuldom(response.text)
         const ul_text = doc.getElementsByClassName('items')[0]['outerHTML']
         const dom = new beautifuldom(ul_text)
         const arr = []
         const imgs = dom.getElementsByTagName('img')
+        const a_s = dom.getElementsByTagName('a')
         for (var i in imgs ){
             
-            arr.push(`${imgs[i].getAttribute('alt')}${imgs[i].getAttribute('src')}EPISODES${0}`)
+                // console.log(`n=${i} ${a_s[(parseInt(i))*2].getAttribute('href')} == ${imgs[i].getAttribute('alt')}`)
+                
+            
+            arr.push(`${imgs[i].getAttribute('alt')}${imgs[i].getAttribute('src')}EPISODES${0}DATA${a_s[(parseInt(i))*2].getAttribute('href')}`)
         }
+    
         return arr
+    }
+    async get_ep(data:string,ep:number){
+        const url = `https://gogoanime.so/${data}-episode-${ep}` 
+        
+        const responde = await superagent.get(url)
+        const dom = new beautifuldom(responde.text)
+        const iframe = dom.getElementsByTagName('iframe')[0].getAttribute('src')
+        return iframe
     }
 }

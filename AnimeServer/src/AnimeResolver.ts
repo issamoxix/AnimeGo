@@ -61,6 +61,14 @@ export class AnimeResolver{
         const x =  new test(name)
         return await x.giveback()
     }
+    @Mutation(()=> String)
+    async eng_ep(
+        @Arg('name') name:string,
+        @Arg('ep') ep:number
+    ){
+        const anime = new base("https://gogoanime.so/",name)
+        return await anime.get_ep(name,ep)
+    }
     @Mutation(()=> Boolean)
     async Sugg(
         @Arg('term') term:string,

@@ -28,6 +28,11 @@ const  Gql = {
   mutation ($anime: String!,$lang: String!) {
     get_img(anime: $anime lang:$lang) 
   }
+  `,
+  ep_eng:gql`
+  mutation ($name: String!,$ep: Float!) {
+    eng_ep(name: $name ep:$ep) 
+  }
   `
 
 }

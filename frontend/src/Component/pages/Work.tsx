@@ -27,7 +27,9 @@ const Work:React.FC = ()=>{
             <div className={val ?"container":"container2"}>
             {!val?<div className="res">
                     {x.map((d:string)=>{
-                        return <Link to={`/Anime?name=${d.split('http')[0]}&ep=${parseInt(d.split('EPISODES')[1])}&src=${d.split('EPISODES')[0].split(d.split('http')[0])[1]}`} ><Card name={d.split('http')[0]} eps={parseInt(d.split('EPISODES')[1])} src={d.split('EPISODES')[0].split(d.split('http')[0])[1]} lang={lang} /></Link>
+                        return (<Link to={`/Anime?name=${d.split('http')[0]}&ep=${parseInt(d.split('EPISODES')[1])}&src=${d.split('EPISODES')[0].split(d.split('http')[0])[1]}&lang=${lang}&data=${lang=="eng"?d.split('DATA/category/')[1]:0}`} >
+                            <Card name={d.split('http')[0]} eps={parseInt(d.split('EPISODES')[1])} src={d.split('EPISODES')[0].split(d.split('http')[0])[1]} lang={lang} /></Link>
+                        )
                     })}
                 </div>:null}
                 <div className={val?"search":"search_fix"}>

@@ -16,24 +16,26 @@ const Landing:React.FC = ()=>{
     return (
 <div className="container-L" style={{height:"100%"}}>  
   <div className="left">
+  <Link to="/search?lang=arb">
     <div className="body">
-      <Link to="/search?lang=arb">
+      
       <div className="sub-body">
       <img src="./pic/hat.png" />
     <h5>Arabic sub</h5>
       </div>
-      </Link>
     </div>
+    </Link>
   </div>
   <div className="right">
+  <Link to="/search?lang=eng">
     <div className="body">
-      <Link to="/search?lang=eng">
+      
       <div className="sub-body">
       <img src="./pic/english.png" />
       <h5>English sub</h5>
-      </div>
-      </Link>
+      </div>  
     </div>
+    </Link>
   </div>
 </div>
   

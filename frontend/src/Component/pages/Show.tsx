@@ -12,11 +12,20 @@ const Show:React.FC = ()=>{
         // Mutations 
         const [check] = useMutation(Gql.get_sugg)
         const [get_episode] = useMutation(Gql.find_anime)
+        const [eng_ep] = useMutation(Gql.ep_eng)
         // ------------------
     let query = new URLSearchParams(useLocation().search)
-    const pross = async (name:any,ep:number) => {  
+    const pross = async (name:any,ep:number,L:string) => {  
         setiframe('./pic/loading.gif')
         setcurr(ep)
+        if(L=="eng"){
+            console.log("here")
+            const data = await eng_ep({variables:{name:name,ep:ep}})
+            
+            return setiframe(data.data['eng_ep'])
+        }
+        
+        
         const f = await check({variables:{term:name,ep:ep}})
 
         if(!f.data['Sugg']) return "You have entered the wrong Episode !!"
@@ -31,6 +40,8 @@ const Show:React.FC = ()=>{
     const episode:any = query.get('ep')
     const src:string | any = query.get('src')
     const name:string | any = query.get('name')
+    const lang:string | any = query.get('lang')
+    const name_d:string | any = query.get('data')
     const x:number = parseInt(episode)
     let arr = []
     for(var i=1;i<x+1;i++){
@@ -38,12 +49,12 @@ const Show:React.FC = ()=>{
     }
     useEffect(()=>{
         if(curr === 1){
-            pross(name,1)
+            pross(name?name:name_d,1,lang)
         }   
     },[])
     return (
         <div className="main-container">
-            <Link to="/" >
+            <Link to="/search" >
                 <img src="./pic/dojo.png" alt="Home" className="Back" />
                 </Link>
             <div className="Show-container">
@@ -54,7 +65,7 @@ const Show:React.FC = ()=>{
                         {/* <h4 className="Next" onClick={()=>pross('Naruto Shippuden',1)} >Next episode </h4> */}
                         <button className="Next" onClick={()=>{
                             if(curr ===x) return alert('There is no more Episodes !!!')
-                                pross(name,curr+1)
+                                pross(name?name:name_d,curr+1,lang)
                             }
                         } >Next Episode</button>
                     </div>
