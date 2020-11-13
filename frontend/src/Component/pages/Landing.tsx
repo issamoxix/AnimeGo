@@ -20,7 +20,7 @@ const Landing:React.FC = ()=>{
     <div className="body">
       
       <div className="sub-body">
-      <img src="./pic/hat.png" />
+      <img src="./pic/hat.png" alt="side bar" />
     <h5>Arabic sub</h5>
       </div>
     </div>
@@ -31,7 +31,7 @@ const Landing:React.FC = ()=>{
     <div className="body">
       
       <div className="sub-body">
-      <img src="./pic/english.png" />
+      <img src="./pic/english.png" alt="side bar" />
       <h5>English sub</h5>
       </div>  
     </div>

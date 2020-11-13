@@ -18,7 +18,7 @@ const Show:React.FC = ()=>{
     const pross = async (name:any,ep:number,L:string) => {  
         setiframe('./pic/loading.gif')
         setcurr(ep)
-        if(L=="eng"){
+        if(L==="eng"){
             console.log("here")
             const data = await eng_ep({variables:{name:name,ep:ep}})
             
