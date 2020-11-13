@@ -37,10 +37,10 @@ const Show:React.FC = ()=>{
         return setiframe(ep_url.replace(ep_url.split('http')[0],''))
     }
     
-    const episode:any = query.get('ep')
     const src:string | any = query.get('src')
     const name:string | any = query.get('name')
     const lang:string | any = query.get('lang')
+    const episode:any = lang==="arb"?query.get('ep'):200
     const name_d:string | any = query.get('data')
     const x:number = parseInt(episode)
     let arr = []

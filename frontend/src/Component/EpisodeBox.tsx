@@ -10,7 +10,9 @@ function EpisodeBox({ n ,img, pross,name }: data) {
     const stye = {
         background:`url('${img}')`,
         backgroundSize:"contain",
-        backgroundRepeat:"no-repeat"
+        backgroundRepeat:"no-repeat",
+        backgroundPosition:"center"
+        
     }
     return (
         <div className="Episode-box" style={stye} onClick={()=>pross(name,n)}>
