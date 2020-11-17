@@ -1,9 +1,9 @@
 //Anime Search Page
 import { useMutation } from '@apollo/react-hooks'
 import React, { useState } from 'react'
-import '../Work.css'
-import Card from '../Card'
-import Gql from '../Gql'
+import '../styles/Work.css'
+import Card from '../components/Card'
+import Gql from '../utils/Gql'
 import { Link, useLocation } from 'react-router-dom'
 
 

@@ -1,10 +1,10 @@
 //Page That Display the Anime Episodes
 import React, { useEffect, useState } from 'react'
-import '../Show.css'
-import EpisodeBox from '../EpisodeBox'
+import '../styles/Show.css'
+import EpisodeBox from '../components/EpisodeBox'
 import { Link, useLocation } from 'react-router-dom'
 import { useMutation } from '@apollo/react-hooks'
-import Gql from '../Gql'
+import Gql from '../utils/Gql'
 const Show:React.FC = ()=>{
 
     const [iframe,setiframe] = useState('')

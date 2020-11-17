@@ -1,5 +1,5 @@
 import React from 'react'
-import "../Page404.css"
+import "../styles/Page404.css"
 const Page404:React.FC = ()=>{
     return (
         <div className="container404">
