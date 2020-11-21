@@ -55,7 +55,7 @@ const Show:React.FC = ()=>{
     return (
         <div className="main-container">
             <Link to="/search" >
-                <img src="./pic/dojo.png" alt="Home" className="Back" />
+                <h3 className="Back">Go Back</h3>
                 </Link>
             <div className="Show-container">
                 <div className="Screen-container">
