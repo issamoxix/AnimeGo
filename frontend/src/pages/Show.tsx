@@ -63,7 +63,10 @@ const Show:React.FC = ()=>{
                 <div className="Screen-container">
                     <iframe src={iframe} title="Show" className="Screen" allowFullScreen />
                     <div className="under-screen">
-                        <h4>{query.get('name')} Episode {curr}</h4>
+                        <h4> <span style={iframe !=='404'?{color:"white"}:{color:"#4bebf3"}}>
+                        {iframe === "404"?`{Episode ${curr} not Found}`:`${query.get('name')} Episode ${curr}`} 
+                        </span>
+                        </h4>
                         {/* <h4 className="Next" onClick={()=>pross('Naruto Shippuden',1)} >Next episode </h4> */}
                         <button className="Next" onClick={()=>{
                             if(curr ===x) return alert('There is no more Episodes !!!')

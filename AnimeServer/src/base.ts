@@ -81,6 +81,7 @@ export class base {
         
         const responde = await superagent.get(url)
         const dom = new beautifuldom(responde.text)
+        if(dom.getElementsByClassName('entry-title')[0]) return 404
         const iframe = dom.getElementsByTagName('iframe')[0].getAttribute('src')
         
         
