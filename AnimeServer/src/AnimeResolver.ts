@@ -67,6 +67,7 @@ export class AnimeResolver{
         @Arg('ep') ep:number
     ){
         const anime = new base("https://gogoanime.so/",name)
+        
         return await anime.get_ep(name,ep)
     }
     @Mutation(()=> Boolean)

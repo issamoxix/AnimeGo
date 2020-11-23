@@ -7,10 +7,10 @@ import {
     ApolloClient,
     InMemoryCache
   } from '@apollo/client'
-
+const domain = "192.168.1.129"
 const client = new ApolloClient({
     cache: new InMemoryCache(),
-    uri:'http://localhost:4000/graphql'
+    uri:`http://${domain}:4000/graphql`
 });
 
 ReactDOM.render(

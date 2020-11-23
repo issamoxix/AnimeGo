@@ -82,6 +82,8 @@ export class base {
         const responde = await superagent.get(url)
         const dom = new beautifuldom(responde.text)
         const iframe = dom.getElementsByTagName('iframe')[0].getAttribute('src')
+        
+        
         return iframe
     }
 }

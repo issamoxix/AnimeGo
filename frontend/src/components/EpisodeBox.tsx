@@ -3,9 +3,10 @@ interface data {
     n:number,
     img:string,
     pross:any,
-    name:string
+    name:string,
+    lang:string
 }
-function EpisodeBox({ n ,img, pross,name }: data) {
+function EpisodeBox({ n ,img, pross,name, lang }: data) {
     const stye = {
         background:`url('${img}')`,
         backgroundSize:"contain",
@@ -14,7 +15,7 @@ function EpisodeBox({ n ,img, pross,name }: data) {
         
     }
     return (
-        <div className="Episode-box" style={stye} onClick={()=>pross(name,n)}>
+        <div className="Episode-box" style={stye} onClick={()=>pross(name,n,lang)}>
             <h5>Episode {n}</h5>
         </div>
     );

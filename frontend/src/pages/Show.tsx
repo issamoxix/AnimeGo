@@ -19,7 +19,7 @@ const Show:React.FC = ()=>{
         setiframe('./pic/loading.gif')
         setcurr(ep)
         if(L==="eng"){
-            console.log("here")
+            
             const data = await eng_ep({variables:{name:name,ep:ep}})
             
             return setiframe(data.data['eng_ep'])
@@ -38,20 +38,22 @@ const Show:React.FC = ()=>{
     }
     
     const src:string | any = query.get('src')
-    const name:string | any = query.get('name')
+    let name:string | any = query.get('name')
+    if(name.includes(' ')) name = name.replaceAll(' ','-')
     const lang:string | any = query.get('lang')
     const episode:any = lang==="arb"?query.get('ep'):200
     const name_d:string | any = query.get('data')
     const x:number = parseInt(episode)
     let arr = []
     for(var i=1;i<x+1;i++){
-       arr.push(<EpisodeBox n={i} img={src} name={name} pross={pross} />)
+       arr.push(<EpisodeBox n={i} img={src} name={name} pross={pross} lang={lang} />)
     }
     useEffect(()=>{
         if(curr === 1){
             pross(name?name:name_d,1,lang)
         }   
     },[])
+    
     return (
         <div className="main-container">
             <Link to="/search" >
@@ -59,7 +61,7 @@ const Show:React.FC = ()=>{
                 </Link>
             <div className="Show-container">
                 <div className="Screen-container">
-                    <iframe src={iframe} title="Show" className="Screen" />
+                    <iframe src={iframe} title="Show" className="Screen" allowFullScreen />
                     <div className="under-screen">
                         <h4>{query.get('name')} Episode {curr}</h4>
                         {/* <h4 className="Next" onClick={()=>pross('Naruto Shippuden',1)} >Next episode </h4> */}
